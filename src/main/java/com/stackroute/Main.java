@@ -8,6 +8,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
@@ -25,8 +26,8 @@ public class Main {
 //        Movie movie1 = (Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie");
 //        System.out.println(movie1.getActor());
 
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie1 = (Movie) applicationContext.getBean("movie1");
+        AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie1 = (Movie) applicationContext.getBean("movie2");
 //        System.out.println(movie1.getActor());
 //        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("beans.xml");
 //        Movie movie2 = (Movie) applicationContext2.getBean("movie2");
