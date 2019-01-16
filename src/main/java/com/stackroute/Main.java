@@ -26,11 +26,11 @@ public class Main {
 //        System.out.println(movie1.getActor());
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie1 = (Movie) applicationContext.getBean("movie1");
-        System.out.println(movie1.getActor());
-        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie2 = (Movie) applicationContext2.getBean("movie2");
-        System.out.println(movie2.getActor());
-
+       // Movie movie1 = (Movie) applicationContext.getBean("movie1");
+       // System.out.println(movie1.getActor());
+//        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("beans.xml");
+//        Movie movie2 = (Movie) applicationContext2.getBean("movie2");
+//        System.out.println(movie2.getActor());
+        ((ClassPathXmlApplicationContext)applicationContext).close();
     }
 }

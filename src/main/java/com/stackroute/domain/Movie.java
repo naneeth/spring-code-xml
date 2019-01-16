@@ -10,12 +10,10 @@ import org.springframework.context.ApplicationContextAware;
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
     private Actor actor;
     public Movie() {
-
     }
     Movie(Actor actor) {
         this.actor = actor;
     }
-
     public Actor getActor() {
         return actor;
     }
@@ -25,6 +23,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     }
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("In bean Factory");
 
     }
 
